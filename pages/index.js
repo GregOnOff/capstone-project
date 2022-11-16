@@ -1,3 +1,13 @@
+import Header from "../components/header/Header";
+import Wishlist from "../components/wishlist/Wishlist";
+import { getAllWishlistItems } from "../dummy-data";
+
 export default function Home() {
-  return <h1>Hello Flamingos!!! 🦩</h1>;
+  const completeItemList = getAllWishlistItems();
+  return (
+    <>
+      <Header />
+      <Wishlist items={completeItemList} />
+    </>
+  );
 }

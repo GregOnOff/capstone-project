@@ -1,36 +1,34 @@
-import { Card } from "../styles/wishlistStyles/ItemCard";
+import Card from "../Card";
+import ItemCategoryIcon from "../ItemCategoryIcon";
+import { BsClock } from "react-icons/bs";
 
-import styled from "styled-components";
-
-import ClockIcon from "../icons/clockIcon";
-import { ImagePlaceholder } from "../styles/wishlistStyles/ImageOnCard";
-
-export default function WishlistItem(props) {
-  const { title, key, id, price, time, image } = props;
+export default function WishlistItem({
+  title,
+  id,
+  price,
+  time,
+  image,
+  category,
+}) {
   return (
-    <div key={key}>
+    <div>
       <Card>
         <h2>{title}</h2>
-        <ImagePlaceholder src={"/" + image}></ImagePlaceholder>
-        <p>{price}€</p>
-        <SpaceBetween>
-          <IconSet>
-            <ClockIcon />
-          </IconSet>
-          <p> {time} Days left</p>
-        </SpaceBetween>
+        <ItemCategoryIcon category={category} />
+        <p>{price} € </p>
+        <p
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {time} Days left
+          <BsClock style={{ marginLeft: 10 }} />
+        </p>
       </Card>
     </div>
   );
 }
-
-const IconSet = styled.div`
-  width: 24px;
-  padding-top: 3px;
-  margin-right: 5px;
-`;
-const SpaceBetween = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;

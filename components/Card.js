@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const Card = styled.li`
+export default styled.li`
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   text-align: center;
+  justify-content: center;
   align-items: center;
   width: 300px;
   height: 180px;

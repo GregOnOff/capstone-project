@@ -1,3 +1,7 @@
+import Wishlist, { WishlistItem } from "../components/Wishlist";
+import { getAllWishlistItems } from "../dummy-data";
+
 export default function Home() {
-  return <h1>Hello Flamingos!!! 🦩</h1>;
+  const completeItemList = getAllWishlistItems();
+  return <Wishlist items={completeItemList} />;
 }

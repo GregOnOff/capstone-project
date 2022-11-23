@@ -1,6 +1,7 @@
 import Card from "../Card";
 import ItemCategoryIcon from "../ItemCategoryIcon";
 import { BsClock } from "react-icons/bs";
+import styled from "styled-components";
 
 export default function WishlistItem({
   title,
@@ -16,19 +17,19 @@ export default function WishlistItem({
         <h2>{title}</h2>
         <ItemCategoryIcon category={category} />
         <p>{price} € </p>
-        <p
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-            height: "100%",
-          }}
-        >
+        <PStyled>
           {time} Days left
           <BsClock style={{ marginLeft: 10 }} />
-        </p>
+        </PStyled>
       </Card>
     </div>
   );
 }
+
+const PStyled = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+`;

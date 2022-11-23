@@ -10,7 +10,7 @@ const DUMMY_ITEMS = [
   },
   {
     id: "i2",
-    title: "Apachi Helicopter",
+    title: "Apache Helicopter",
     price: 99.95,
     link: "https://amazon.com",
     category: "tech",
@@ -25,6 +25,15 @@ const DUMMY_ITEMS = [
     category: "furniture",
     image: "images/placeholder.png",
     timeLeft: 6,
+  },
+  {
+    id: "i4",
+    title: "MacBook",
+    price: 1299.99,
+    link: "https://amazon.com",
+    category: "health",
+    image: "images/placeholder.png",
+    timeLeft: 12,
   },
 ];
 

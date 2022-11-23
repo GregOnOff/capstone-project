@@ -1,11 +1,11 @@
-import { HiOutlineBellSnooze } from "react-icons/hi2";
+import { AiOutlineBell } from "react-icons/ai";
 import styled from "styled-components";
 
 export default function Header() {
   return (
     <HeaderStyled>
       <IconStyled>
-        <HiOutlineBellSnooze style={{ fontSize: "3em" }} />
+        <AiOutlineBell style={{ fontSize: "3em" }} />
       </IconStyled>
       <h1>DIRNT?</h1>
     </HeaderStyled>

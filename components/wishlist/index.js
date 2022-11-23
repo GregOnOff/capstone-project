@@ -27,6 +27,7 @@ const Headline = styled.h1`
   justify-content: center;
   align-items: center;
   color: #fff;
+  
 `;
 
 const ListStyled = styled.ul`

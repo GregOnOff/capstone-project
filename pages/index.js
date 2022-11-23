@@ -1,7 +1,62 @@
+import Link from "next/link";
 import Wishlist, { WishlistItem } from "../components/Wishlist";
-import { getAllWishlistItems } from "../dummy-data";
 
-export default function Home() {
-  const completeItemList = getAllWishlistItems();
-  return <Wishlist items={completeItemList} />;
+import styled from "styled-components";
+import { BsPlusCircleDotted } from "react-icons/bs";
+
+export default function Home({ itemData }) {
+  return (
+    <>
+      <div>
+        <Wishlist items={itemData.wishlistItems} />
+        <FooterStyled>
+          <LinkStyled href={"/new"}>
+            <SpanStyled>
+              ADD NEW ITEM
+              <BsPlusCircleDotted
+                style={{ fontSize: "1.5rem", marginLeft: "10px" }}
+              />
+            </SpanStyled>
+          </LinkStyled>
+        </FooterStyled>
+      </div>
+    </>
+  );
 }
+
+const LinkStyled = styled(Link)`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #4468b5;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+  &:hover {
+    transform: scale(0.97);
+  }
+`;
+
+const FooterStyled = styled.footer`
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: #021d2e;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.75);
+`;
+
+const SpanStyled = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

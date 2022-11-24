@@ -1,20 +1,19 @@
 import { TbSofa } from "react-icons/tb";
 import { MdMonitor } from "react-icons/md";
-import { IoShirtOutline } from "react-icons/io";
+import { RiTShirt2Line } from "react-icons/ri";
 import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { GiMedicines } from "react-icons/gi";
 import { BsFillQuestionSquareFill } from "react-icons/bs";
 
 export default function ItemCategoryIcon({ category }) {
   function getIconByCat(category) {
-    console.log(category);
     switch (category) {
       case "tech":
         return <MdMonitor />;
       case "furniture":
         return <TbSofa />;
       case "fashion":
-        return <IoShirtOutline />;
+        return <RiTShirt2Line />;
       case "service":
         return <HiOutlineWrenchScrewdriver />;
       case "health":

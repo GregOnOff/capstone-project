@@ -27,14 +27,14 @@ const Headline = styled.h1`
   justify-content: center;
   align-items: center;
   color: #fff;
-  
 `;
 
 const ListStyled = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 `;

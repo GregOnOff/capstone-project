@@ -21,8 +21,6 @@ export default function AddItemForm({ setItemData }) {
     const formData = new FormData(event.target);
     const itemAll = Object.fromEntries(formData);
 
-    //TODO make a human readable date out of the date
-
     setItemData((itemData) => {
       return {
         ...itemData,

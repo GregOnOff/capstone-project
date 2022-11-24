@@ -35,6 +35,10 @@ const ListStyled = styled.ul`
   justify-content: center;
   flex-direction: row-reverse;
   overflow: hidden;
+  flex-direction: row-reverse;
+  scroll-snap-align: initial;
+  overflow-x: auto;
+
   margin: 0;
   padding: 0;
 `;

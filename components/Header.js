@@ -1,11 +1,11 @@
-import { HiOutlineLightBulb } from "react-icons/hi2";
+import { FaCoins } from "react-icons/fa";
 import styled from "styled-components";
 
 export default function Header() {
   return (
     <HeaderStyled>
       <IconStyled>
-        <HiOutlineLightBulb style={{ fontSize: "2.5em" }} />
+        <FaCoins style={{ fontSize: "2.5em" }} />
       </IconStyled>
       <DivStyled>
         <h1>DIRNT!?</h1>

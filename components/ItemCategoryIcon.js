@@ -1,25 +1,54 @@
-import { TbSofa } from "react-icons/tb";
-import { MdMonitor } from "react-icons/md";
-import { RiTShirt2Line } from "react-icons/ri";
-import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
-import { GiMedicines } from "react-icons/gi";
-import { BsFillQuestionSquareFill } from "react-icons/bs";
-
 export default function ItemCategoryIcon({ category }) {
   function getIconByCat(category) {
     switch (category) {
       case "tech":
-        return <MdMonitor />;
+        return (
+          <img
+            src="/images/tech.png"
+            width={60}
+            style={{ filter: "invert(100)" }}
+          />
+        );
       case "furniture":
-        return <TbSofa />;
+        return (
+          <img
+            src="/images/couch.png"
+            width={60}
+            style={{ filter: "invert(100)" }}
+          />
+        );
       case "fashion":
-        return <RiTShirt2Line />;
+        return (
+          <img
+            src="/images/fashion.png"
+            width={60}
+            style={{ filter: "invert(100)" }}
+          />
+        );
       case "service":
-        return <HiOutlineWrenchScrewdriver />;
+        return (
+          <img
+            src="/images/service.png"
+            width={60}
+            style={{ filter: "invert(100)" }}
+          />
+        );
       case "health":
-        return <GiMedicines />;
+        return (
+          <img
+            src="/images/health.png"
+            width={60}
+            style={{ filter: "invert(100)" }}
+          />
+        );
       case "others":
-        return <BsFillQuestionSquareFill />;
+        return (
+          <img
+            src="/images/others.png"
+            width={60}
+            style={{ filter: "invert(100)" }}
+          />
+        );
       default:
         return "Panda";
     }

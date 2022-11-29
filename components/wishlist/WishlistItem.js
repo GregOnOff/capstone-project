@@ -31,4 +31,5 @@ const PStyled = styled.p`
 const LinkStyled = styled(Link)`
   text-decoration: none;
   color: white;
+  scroll-snap-align: start;
 `;

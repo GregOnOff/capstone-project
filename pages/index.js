@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Wishlist, { WishlistItem } from "../components/Wishlist";
+import Wishlist from "../components/Wishlist";
 
 import styled from "styled-components";
-import { BsPlusCircleDotted } from "react-icons/bs";
+// import { BsPlusCircleDotted } from "react-icons/bs";
 
 export default function Home({ itemData }) {
   return (
@@ -13,9 +13,9 @@ export default function Home({ itemData }) {
           <LinkStyled href={"/new"}>
             <SpanStyled>
               ADD NEW ITEM
-              <BsPlusCircleDotted
+              {/* <BsPlusCircleDotted
                 style={{ fontSize: "1.5rem", marginLeft: "10px" }}
-              />
+              /> */}
             </SpanStyled>
           </LinkStyled>
         </FooterStyled>

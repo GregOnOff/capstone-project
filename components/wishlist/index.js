@@ -6,17 +6,19 @@ export default function Wishlist({ items }) {
     <div>
       <Headline>Wishlist</Headline>
       <ListStyled>
-        {items.map((item) => (
-          <WishlistItem
-            key={item.id}
-            id={item.id}
-            title={item.title}
-            price={item.price}
-            time={item.timeLeft}
-            image={item.image}
-            category={item.category}
-          />
-        ))}
+        {structuredClone(items)
+          .reverse()
+          .map((item) => (
+            <WishlistItem
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              time={item.timeLeft}
+              image={item.image}
+              category={item.category}
+            />
+          ))}
       </ListStyled>
     </div>
   );
@@ -31,14 +33,10 @@ const Headline = styled.h1`
 
 const ListStyled = styled.ul`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-  overflow: hidden;
-  flex-direction: row-reverse;
+  flex-direction: row;
   scroll-snap-align: initial;
   overflow-x: auto;
-
+  scroll-snap-type: x mandatory;
   margin: 0;
   padding: 0;
 `;

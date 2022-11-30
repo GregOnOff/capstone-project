@@ -1,7 +1,7 @@
 // import styled from "styled-components";
 import { useRouter } from "next/router";
 import SnackBar from "../../components/SnackBar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   FormStyled,
   LinkStyled,

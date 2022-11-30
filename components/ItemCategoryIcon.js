@@ -1,52 +1,62 @@
+import Image from "next/image";
+import styled from "styled-components";
+
 export default function ItemCategoryIcon({ category }) {
-  function getIconByCat(category) {
+  function getIconByCategory(category) {
     switch (category) {
       case "tech":
         return (
-          <img
+          <ImageStyled
             src="/images/tech.png"
-            width={60}
-            style={{ filter: "invert(100)" }}
+            alt="Tech icon"
+            width={75}
+            height={75}
           />
         );
       case "furniture":
         return (
-          <img
+          <ImageStyled
             src="/images/couch.png"
-            width={60}
-            style={{ filter: "invert(100)" }}
+            alt="Furniture icon"
+            width={75}
+            height={75}
           />
         );
       case "fashion":
         return (
-          <img
+          <ImageStyled
             src="/images/fashion.png"
-            width={60}
-            style={{ filter: "invert(100)" }}
+            alt="Fashion icon"
+            width={75}
+            height={75}
           />
         );
       case "service":
         return (
-          <img
+          <ImageStyled
             src="/images/service.png"
-            width={60}
-            style={{ filter: "invert(100)" }}
+            alt="Servide icon"
+            width={75}
+            height={75}
           />
         );
       case "health":
         return (
-          <img
+          <ImageStyled
             src="/images/health.png"
-            width={60}
-            style={{ filter: "invert(100)" }}
+            alt="Health Icon"
+            width={75}
+            height={75}
+            priority
           />
         );
       case "others":
         return (
-          <img
+          <ImageStyled
             src="/images/others.png"
-            width={60}
-            style={{ filter: "invert(100)" }}
+            alt="Others icon"
+            width={75}
+            height={75}
           />
         );
       default:
@@ -56,7 +66,11 @@ export default function ItemCategoryIcon({ category }) {
 
   return (
     <span style={{ fontSize: "3.5em", lineHeight: 0 }}>
-      {getIconByCat(category)}
+      {getIconByCategory(category)}
     </span>
   );
 }
+
+const ImageStyled = styled(Image)`
+  filter: invert(100);
+`;

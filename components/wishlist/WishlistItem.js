@@ -1,6 +1,6 @@
 import Card from "../Card";
 import ItemCategoryIcon from "../ItemCategoryIcon";
-import { BsClock } from "react-icons/bs";
+import { FaClock } from "react-icons/fa";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ export default function WishlistItem({ title, id, price, time, category }) {
         <p>{price} € </p>
         <PStyled>
           {time} Days left
-          <BsClock style={{ marginLeft: 10 }} />
+          <FaClock style={{ marginLeft: 10 }} />
         </PStyled>
       </Card>
     </LinkStyled>

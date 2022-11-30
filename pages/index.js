@@ -2,7 +2,6 @@ import Link from "next/link";
 import Wishlist from "../components/Wishlist";
 import styled from "styled-components";
 import { FaPlusSquare } from "react-icons/fa";
-q;
 
 export default function Home({ itemData }) {
   return (

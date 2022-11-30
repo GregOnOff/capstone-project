@@ -5,17 +5,13 @@ import ItemCategoryIcon from "../ItemCategoryIcon";
 import { DetailsCardStyled, StyledLink, StyledShopLink } from "./DetailsStyled";
 
 export default function DetailsCard({ items }) {
-  function findRoute(item) {
-    return item.id === id;
-  }
-
   const router = useRouter();
+
   const { id } = router.query;
   if (!id) return;
-  const details = items.find(findRoute);
+  const details = items.find((item) => item.id === id);
 
-  console.log(details.date);
-  let itemDate = new Date(details.date);
+  const itemDate = new Date(details.date);
 
   return (
     <>
@@ -39,9 +35,8 @@ export default function DetailsCard({ items }) {
           </div>
         )}
       </DetailsCardStyled>
-      <div>
-        <StyledLink href={"/"}>Back</StyledLink>
-      </div>
+
+      <StyledLink href={"/"}>Back</StyledLink>
     </>
   );
 }

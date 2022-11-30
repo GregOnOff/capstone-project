@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Wishlist from "../components/wishlist";
+import Wishlist from "../components/Wishlist";
 import styled from "styled-components";
 import { FaPlusSquare } from "react-icons/fa";
 
@@ -8,6 +8,7 @@ export default function Home({ itemData }) {
     <>
       <div>
         <Wishlist items={itemData.wishlistItems} />
+
         <FooterStyled>
           <LinkStyled href={"/new"}>
             <SpanStyled>
@@ -23,8 +24,7 @@ export default function Home({ itemData }) {
 
 const LinkStyled = styled(Link)`
   position: absolute;
-  display: flex;
-  flex-direction: column;
+
   background-color: #4468b5;
   color: white;
   padding: 16px;

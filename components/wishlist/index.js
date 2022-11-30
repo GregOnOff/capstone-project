@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Wishlist({ items }) {
   return (
-    <div>
+    <>
       <Headline>Wishlist</Headline>
       <ListStyled>
         {structuredClone(items)
@@ -20,7 +20,7 @@ export default function Wishlist({ items }) {
             />
           ))}
       </ListStyled>
-    </div>
+    </>
   );
 }
 export { WishlistItem };

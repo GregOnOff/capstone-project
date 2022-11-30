@@ -5,11 +5,11 @@ export default function Header() {
   return (
     <HeaderStyled>
       <IconStyled>
-        <FaCoins style={{ fontSize: "2.5em" }} />
+        <CoinStyled />
       </IconStyled>
       <DivStyled>
         <h1>DIRNT!?</h1>
-        <span>Do I really need that!?</span>
+        <h2>Do I really need that!?</h2>
       </DivStyled>
     </HeaderStyled>
   );
@@ -35,4 +35,8 @@ const DivStyled = styled.div`
   flex-direction: column;
   align-items: center;
   line-height: 0.2;
+`;
+
+const CoinStyled = styled(FaCoins)`
+  font-size: 2.5em;
 `;

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function WishlistItem({ title, id, price, time, category }) {
   return (
-    <LinkStyled href={"/items/" + id} key={id}>
+    <LinkStyled href={"/items/" + id}>
       <Card>
         <h2>{title}</h2>
         <ItemCategoryIcon category={category} />

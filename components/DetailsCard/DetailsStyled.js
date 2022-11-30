@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-const DetailsCardStyled = styled.div`
+const DetailsCardStyled = styled.article`
   display: grid;
   grid-template-columns: 100;
   grid-template-rows: auto;

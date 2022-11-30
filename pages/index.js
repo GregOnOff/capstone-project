@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Wishlist from "../components/Wishlist";
+import Wishlist from "../components/wishlist";
 import styled from "styled-components";
 import { FaPlusSquare } from "react-icons/fa";
 

@@ -2,29 +2,27 @@ import Link from "next/link";
 import Wishlist from "../components/Wishlist";
 import styled from "styled-components";
 import { FaPlusSquare } from "react-icons/fa";
+q;
 
 export default function Home({ itemData }) {
   return (
     <>
-      <div>
-        <Wishlist items={itemData.wishlistItems} />
+      <Wishlist items={itemData.wishlistItems} />
 
-        <FooterStyled>
-          <LinkStyled href={"/new"}>
-            <SpanStyled>
-              ADD NEW ITEM
-              <FaPlusSquare />
-            </SpanStyled>
-          </LinkStyled>
-        </FooterStyled>
-      </div>
+      <FooterStyled>
+        <LinkStyled href={"/new"}>
+          <SpanStyled>
+            ADD NEW ITEM
+            <FaPlusSquare />
+          </SpanStyled>
+        </LinkStyled>
+      </FooterStyled>
     </>
   );
 }
 
 const LinkStyled = styled(Link)`
   position: absolute;
-
   background-color: #4468b5;
   color: white;
   padding: 16px;

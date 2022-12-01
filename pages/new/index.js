@@ -1,7 +1,7 @@
 // import styled from "styled-components";
 import { useRouter } from "next/router";
 import SnackBar from "../../components/SnackBar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   FormStyled,
   LinkStyled,
@@ -20,8 +20,6 @@ export default function AddItemForm({ setItemData }) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const itemAll = Object.fromEntries(formData);
-
-    //TODO make a human readable date out of the date
 
     setItemData((itemData) => {
       return {

@@ -1,28 +1,42 @@
-import { AiOutlineBell } from "react-icons/ai";
+import { FaCoins } from "react-icons/fa";
 import styled from "styled-components";
 
 export default function Header() {
   return (
     <HeaderStyled>
       <IconStyled>
-        <AiOutlineBell style={{ fontSize: "3em" }} />
+        <CoinStyled />
       </IconStyled>
-      <h1>DIRNT?</h1>
+      <DivStyled>
+        <h1>DIRNT!?</h1>
+        <h2>Do I really need that!?</h2>
+      </DivStyled>
     </HeaderStyled>
   );
 }
 
 const IconStyled = styled.div`
   width: 60px;
-  margin-right: 10px;
+  margin-right: 0px;
 `;
 
 const HeaderStyled = styled.header`
   width: 100%;
   height: 85px;
-  background: linear-gradient(90deg, #333, #777);
+  background: linear-gradient(14deg, #021d2e, 85%, #fff);
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 7px black;
+`;
+
+const DivStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.2;
+`;
+
+const CoinStyled = styled(FaCoins)`
+  font-size: 2.5em;
 `;

@@ -1,25 +1,64 @@
-import { TbSofa } from "react-icons/tb";
-import { MdMonitor } from "react-icons/md";
-import { RiTShirt2Line } from "react-icons/ri";
-import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
-import { GiMedicines } from "react-icons/gi";
-import { BsFillQuestionSquareFill } from "react-icons/bs";
+import Image from "next/image";
+import styled from "styled-components";
 
 export default function ItemCategoryIcon({ category }) {
-  function getIconByCat(category) {
+  function getIconByCategory(category) {
     switch (category) {
       case "tech":
-        return <MdMonitor />;
+        return (
+          <ImageStyled
+            src="/images/tech.png"
+            alt="Tech icon"
+            width={75}
+            height={75}
+          />
+        );
       case "furniture":
-        return <TbSofa />;
+        return (
+          <ImageStyled
+            src="/images/couch.png"
+            alt="Furniture icon"
+            width={75}
+            height={75}
+          />
+        );
       case "fashion":
-        return <RiTShirt2Line />;
+        return (
+          <ImageStyled
+            src="/images/fashion.png"
+            alt="Fashion icon"
+            width={75}
+            height={75}
+          />
+        );
       case "service":
-        return <HiOutlineWrenchScrewdriver />;
+        return (
+          <ImageStyled
+            src="/images/service.png"
+            alt="Servide icon"
+            width={75}
+            height={75}
+          />
+        );
       case "health":
-        return <GiMedicines />;
+        return (
+          <ImageStyled
+            src="/images/health.png"
+            alt="Health Icon"
+            width={75}
+            height={75}
+            priority
+          />
+        );
       case "others":
-        return <BsFillQuestionSquareFill />;
+        return (
+          <ImageStyled
+            src="/images/others.png"
+            alt="Others icon"
+            width={75}
+            height={75}
+          />
+        );
       default:
         return "Panda";
     }
@@ -27,7 +66,11 @@ export default function ItemCategoryIcon({ category }) {
 
   return (
     <span style={{ fontSize: "3.5em", lineHeight: 0 }}>
-      {getIconByCat(category)}
+      {getIconByCategory(category)}
     </span>
   );
 }
+
+const ImageStyled = styled(Image)`
+  filter: invert(100);
+`;

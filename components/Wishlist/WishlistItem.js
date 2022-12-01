@@ -1,28 +1,22 @@
 import Card from "../Card";
 import ItemCategoryIcon from "../ItemCategoryIcon";
-import { BsClock } from "react-icons/bs";
+import { FaClock } from "react-icons/fa";
 import styled from "styled-components";
+import Link from "next/link";
 
-export default function WishlistItem({
-  title,
-  id,
-  price,
-  time,
-  image,
-  category,
-}) {
+export default function WishlistItem({ title, id, price, time, category }) {
   return (
-    <div>
+    <LinkStyled href={"/items/" + id}>
       <Card>
         <h2>{title}</h2>
         <ItemCategoryIcon category={category} />
         <p>{price} € </p>
         <PStyled>
           {time} Days left
-          <BsClock style={{ marginLeft: 10 }} />
+          <FaClock style={{ marginLeft: 10 }} />
         </PStyled>
       </Card>
-    </div>
+    </LinkStyled>
   );
 }
 
@@ -32,4 +26,10 @@ const PStyled = styled.p`
   justify-content: center;
   width: 100%;
   height: 100%;
+`;
+
+const LinkStyled = styled(Link)`
+  text-decoration: none;
+  color: white;
+  scroll-snap-align: start;
 `;

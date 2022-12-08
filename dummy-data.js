@@ -5,7 +5,6 @@ const DUMMY_ITEMS = [
     price: "999.99",
     link: "https://amazon.com",
     category: "health",
-    image: "images/placeholder.png",
     timeLeft: 9,
   },
   {
@@ -14,7 +13,6 @@ const DUMMY_ITEMS = [
     price: 99.95,
     link: "https://amazon.com",
     category: "others",
-    image: "images/placeholder.png",
     timeLeft: 4,
   },
   {
@@ -23,7 +21,6 @@ const DUMMY_ITEMS = [
     price: 399.99,
     link: "https://amazon.com",
     category: "furniture",
-    image: "images/placeholder.png",
     timeLeft: 6,
   },
   {
@@ -32,7 +29,6 @@ const DUMMY_ITEMS = [
     price: 1299.99,
     link: "https://amazon.com",
     category: "tech",
-    image: "images/placeholder.png",
     timeLeft: 12,
   },
 ];

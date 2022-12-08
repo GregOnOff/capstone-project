@@ -1,4 +1,3 @@
-// import styled from "styled-components";
 import { useRouter } from "next/router";
 import SnackBar from "../../components/SnackBar";
 import { useState } from "react";
@@ -47,7 +46,6 @@ export default function AddItemForm({ setItemData }) {
       )}
       {!showSnacky && (
         <>
-          {" "}
           <h3>Please enter product data</h3>
           <FormStyled onSubmit={submitHandler}>
             <label htmlFor="itemName">What do you want to buy?</label>

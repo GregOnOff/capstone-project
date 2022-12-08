@@ -1,8 +1,11 @@
 import { useRouter } from "next/router";
-
 import ItemCategoryIcon from "../ItemCategoryIcon";
-
-import { DetailsCardStyled, StyledLink, StyledShopLink } from "./DetailsStyled";
+import {
+  DetailsCardStyled,
+  StyledShopLink,
+  StyledLink,
+  ButtonBox,
+} from "./DetailsStyled";
 
 export default function DetailsCard({ items }) {
   const router = useRouter();
@@ -36,7 +39,10 @@ export default function DetailsCard({ items }) {
         )}
       </DetailsCardStyled>
 
-      <StyledLink href={"/"}>Back</StyledLink>
+      <ButtonBox>
+        <StyledLink href={"/"}>Back</StyledLink>
+        <StyledLink href={`/edit/${id}`}>Edit</StyledLink>
+      </ButtonBox>
     </>
   );
 }

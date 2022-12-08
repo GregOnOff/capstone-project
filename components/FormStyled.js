@@ -7,6 +7,8 @@ const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.6em;
+
   label {
     font-size: large;
     font-weight: 600;

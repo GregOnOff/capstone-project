@@ -19,22 +19,6 @@ const DetailsCardStyled = styled.article`
   padding: 2rem 1rem;
 `;
 
-const StyledLink = styled(Link)`
-  position: absolute;
-  border: 2px solid black;
-  right: 50%;
-  transform: translateX(50%);
-  text-align: center;
-  color: white;
-  font-weight: 500;
-  border: 2px solid #555;
-  background-color: #e04e1a;
-  font-size: 1.2rem;
-  border-radius: 7px;
-  text-decoration: none;
-  padding: 10px;
-  width: 120px;
-`;
 const StyledShopLink = styled(Link)`
   text-align: center;
   color: white;
@@ -47,5 +31,25 @@ const StyledShopLink = styled(Link)`
   padding: 7px 10px;
   width: 120px;
 `;
+const ButtonBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+`;
 
-export { DetailsCardStyled, StyledLink, StyledShopLink };
+const StyledLink = styled(Link)`
+  border: 2px solid black;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  border: 2px solid #555;
+  background-color: #e04e1a;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  text-decoration: none;
+  padding: 10px;
+  width: 120px;
+`;
+
+export { DetailsCardStyled, StyledLink, StyledShopLink, ButtonBox };

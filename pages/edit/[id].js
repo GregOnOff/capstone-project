@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import EditData from "../../components/EditData";
+import FormSheet from "../../components/FormSheet";
 
 export default function EditDetails({ itemData, setItemData }) {
   const items = itemData.wishlistItems;
@@ -8,29 +8,20 @@ export default function EditDetails({ itemData, setItemData }) {
   if (!id) return;
   const editableItem = items.find((item) => item.id === id);
 
-  const editItemData = (id, title, price, link, category, image) => {
-    const newItemData = {
-      id,
-      title,
-      price,
-      link,
-      category,
-      image,
-    };
-
+  const onSave = (itemAll) => {
     setItemData((itemData) => {
       return {
         ...itemData,
         wishlistItems: itemData.wishlistItems.map((item) => {
-          if (item.id === newItemData.id) {
-            return { ...item, ...newItemData };
+          if (item.id === id) {
+            return { ...item, ...itemAll };
           }
           return item;
         }),
       };
     });
   };
-  const deleteHandler = (id) => {
+  const deleteHandler = () => {
     setItemData((itemData) => {
       return {
         ...itemData,
@@ -43,10 +34,12 @@ export default function EditDetails({ itemData, setItemData }) {
   };
 
   return (
-    <EditData
-      item={editableItem ?? {}}
-      editItemData={editItemData}
-      deleteHandler={deleteHandler}
+    <FormSheet
+      onSave={onSave}
+      onDelete={deleteHandler}
+      item={editableItem}
+      push={() => router.push("/")}
+      editMode
     />
   );
 }

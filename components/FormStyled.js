@@ -27,7 +27,7 @@ const InputStyled = styled.input`
 `;
 
 const DivStyled = styled.div`
-  line-height: 1.2;
+  line-height: 1;
   padding: 2rem 0;
   display: flex;
   justify-content: center;

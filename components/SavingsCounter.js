@@ -7,7 +7,7 @@ export default function SavingsCounter({ itemData }) {
         <div>
           <NumberedOutcomeStyled>{itemData.savings} €</NumberedOutcomeStyled>
           <NumberedOutcomeStyled>
-            {itemData.deletedItems.length}
+            {itemData.deletedItems.length} buys
           </NumberedOutcomeStyled>
         </div>
         <div>
@@ -43,5 +43,4 @@ const DeclarationStyled = styled.p`
 const NumberedOutcomeStyled = styled.p`
   font-size: 1.5rem;
   font-weight: 600;
-  align-self: flex-end;
 `;

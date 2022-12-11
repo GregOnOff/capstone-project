@@ -10,6 +10,7 @@ export default styled.li`
   width: 300px;
   height: 180px;
   background-color: #5a79ba;
+  opacity: 0.9;
   list-style: none;
   border-radius: 15px;
   padding: 15px;

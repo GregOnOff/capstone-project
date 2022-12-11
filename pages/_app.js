@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [itemData, setItemData] = useLocalStorage("data", {
-    wishlistItems: [],
+    wishlistItems: getAllWishlistItems(),
     savings: 0,
     deletedItems: [],
   });

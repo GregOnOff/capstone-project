@@ -2,17 +2,19 @@ import Link from "next/link";
 import Wishlist from "../components/Wishlist";
 import styled from "styled-components";
 import { FaPlusSquare } from "react-icons/fa";
+import SavingsCounter from "../components/SavingsCounter";
+import { useEffect } from "react";
 
 export default function Home({ itemData }) {
   return (
     <>
       <Wishlist items={itemData.wishlistItems} />
-
+      <SavingsCounter itemData={itemData} />
       <FooterStyled>
         <LinkStyled href={"/new"}>
           <SpanStyled>
-            ADD NEW ITEM
             <FaPlusSquare />
+            ADD NEW ITEM
           </SpanStyled>
         </LinkStyled>
       </FooterStyled>

@@ -23,12 +23,15 @@ export default function Wishlist({ items }) {
     </>
   );
 }
+
 export { WishlistItem };
 const Headline = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
+  padding: 0;
+  line-height: 0.5;
 `;
 
 const ListStyled = styled.ul`

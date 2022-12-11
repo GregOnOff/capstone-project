@@ -23,13 +23,24 @@ export default function EditDetails({ itemData, setItemData }) {
   };
   const deleteHandler = () => {
     setItemData((itemData) => {
+      const x = itemData.wishlistItems.find((item) => item.id === id);
+
       return {
         ...itemData,
+        savings: x.price + itemData.savings,
+        deletedItems: [
+          ...itemData.deletedItems,
+          {
+            title: x.title,
+            price: x.price,
+          },
+        ],
         wishlistItems: itemData.wishlistItems.filter((item) => {
           return item.id !== id;
         }),
       };
     });
+
     router.push("/");
   };
 

@@ -27,7 +27,7 @@ const InputStyled = styled.input`
 `;
 
 const DivStyled = styled.div`
-  line-height: 2;
+  line-height: 1.2;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
@@ -86,6 +86,18 @@ const BtnDivStyled = styled.div`
   max-width: 100%;
 `;
 
+const DeleteButton = styled.button`
+  border: 1px solid #555;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  text-decoration: none;
+  padding: 10px;
+  width: 120px;
+`;
+
 export {
   FormStyled,
   LinkStyled,
@@ -94,4 +106,5 @@ export {
   InputStyled,
   DivStyled,
   BtnDivStyled,
+  DeleteButton,
 };

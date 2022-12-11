@@ -9,7 +9,7 @@ export default function Header() {
       </IconStyled>
       <DivStyled>
         <h1>DIRNT!?</h1>
-        <h2>Do I really need that!?</h2>
+        <span>Do I really need that!?</span>
       </DivStyled>
     </HeaderStyled>
   );
@@ -23,7 +23,7 @@ const IconStyled = styled.div`
 const HeaderStyled = styled.header`
   width: 100%;
   height: 85px;
-  background: linear-gradient(14deg, #021d2e, 85%, #fff);
+  background: linear-gradient(10deg, #021d2e, 85%, #fff);
   display: flex;
   justify-content: center;
   align-items: center;

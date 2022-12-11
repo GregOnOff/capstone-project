@@ -8,6 +8,7 @@ import {
   InputStyled,
   DivStyled,
   BtnDivStyled,
+  DeleteButton,
 } from "./FormStyled";
 
 export default function FormSheet({ onSave, onDelete, push, editMode, item }) {
@@ -95,7 +96,7 @@ export default function FormSheet({ onSave, onDelete, push, editMode, item }) {
               <LinkStyled href={"/"}> Cancel </LinkStyled>
               <SaveBtnStyled type="submit">Save</SaveBtnStyled>
             </BtnDivStyled>
-            {editMode && <button onClick={onDelete}>Delete</button>}
+            {editMode && <DeleteButton onClick={onDelete}>Delete</DeleteButton>}
           </FormStyled>
         </>
       )}

@@ -1,32 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MY Capstone Project - 'Do I realkly need that?!'
 
-## Getting Started
+DIRNT?! is an app that should help users avoid impulsive purchases. The user is able to gop through 5-6 quick questions which will evaluate the pros and cons of this product. And further more the user can set a consideration time. when this time is up, the app will ask the user if he still wants do purchse it or maybe it was just a bad idea thinking 'I need that right away!' 
 
-First, run the development server:
+![p1md](https://user-images.githubusercontent.com/113910034/207319163-a2e5e5df-a3cc-43ff-883f-7ded4533a7c8.PNG)
+![p2md](https://user-images.githubusercontent.com/113910034/207319183-6ffce2a8-3208-48e5-8463-09ecd995f536.PNG)
+![p3md](https://user-images.githubusercontent.com/113910034/207319197-b33f708b-6c1e-4539-9a0d-5e4a687f233c.PNG)
 
-```bash
-npm run dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+_______
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+##Demo 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+You can find a Demo here : 
+[Demo-Vercel](https://capstone-project-e4jsh5xg1-gregonoff.vercel.app/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+_______
 
-## Learn More
+##Tech Stack included
 
-To learn more about Next.js, take a look at the following resources:
+- React
+- NEXT.js
+- JavaScript
+- StyledComponents (CSS3)
+- Router
+- LocalStorage
+- Node.js
+- Jest
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+_______
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## How to set up?
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Clone this repository
+- Install all dependencies with $ npm install
+- create a Cloudinary account and change the cloudname in the App.js
+- insert your API_Key, API_Secret and Cloudname as an enviroment variable in the terminal
+- Run app in dev mode with $ npm run dev
+- Server: http://localhost:3000/
+- Run tests via $ npm run test
